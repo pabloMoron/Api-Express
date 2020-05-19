@@ -39,7 +39,9 @@ router.post('/',urlencodedParser,async function(req, res){
 res.send();
 });
 
-//delete
+/*delete
+curl -X "DELETE" http://localhost:3000/clients/1 -i
+*/
 router.delete('/:clientId',async function(req,res){
 var id = req.params['clientId'];
 try{
