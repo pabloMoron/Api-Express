@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var redis = require('redis');
-var redisClient = require('../db');
+var redisClient = require('../dbRedis');
 var cliConst=require('../public/javascripts/varClient');
 var resConst=require('../public/javascripts/response');
 
@@ -34,7 +34,7 @@ router.post('/',urlencodedParser,async function(req, res){
   var newid = await redisClient.insertClient(cli);
   res.write(resConst(201,"Cliente creado correctamente, id: "+newid));
 } catch (error) {
-  res.write(resConst(500,"Error code 1 (mensaje implementado por cliente)"))
+  res.write(resConst(500,"Error code 1 (mensaje implementado por cliente)")) //Error creando cliente en redis
 }
 res.send();
 });
