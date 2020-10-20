@@ -1,0 +1,22 @@
+GET http://localhost:3000/clients/
+###
+GET http://localhost:3000/clients/2
+###
+POST http://localhost:3000/clients/
+Content-Type: application/x-www-form-urlencoded
+
+name=Pablo Moron
+###
+POST http://localhost:3000/clients/
+Content-Type: application/x-www-form-urlencoded
+
+name=Sarasa King
+###
+DELETE http://localhost:3000/clients/1
+
+###
+PUT http://localhost:3000/clients/
+Content-Type: application/x-www-form-urlencoded
+
+id=2&name= Pepe Argento
+

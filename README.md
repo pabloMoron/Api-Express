@@ -14,19 +14,17 @@
 
 # comandos redis
 
-- `get cliIdCounter` // Las keys son case sensitive
+- `get ClientIdCount` // Las keys son case sensitive
 
 - `flushall` // Borra todas las keys
 
 - `keys *` // Lista todas las keys
 
-- `hget client1 name` // Obtiene la propiedad name del hash client1
+- `get Client1` // Obtiene el client1
 
-- `hgetall client1` // Obtiene todas las propiedades del hash client1
+- `incr ClientIdCount` // Aaumenta en 1
 
-- `incr cliIdCounter` // Aaumenta en 1
-
-- `decr cliIdCounter` // Decrementa en 1
+- `incr ClientIdCount` // Decrementa en 1
 
 # Request
 GET

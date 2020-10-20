@@ -4,12 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var dbRedis = require('./dbRedis');
 
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var clientsRouter = require('./routes/clients');
+var clientsRouter = require('./routes/Clients');
 
 var app = express();
 
